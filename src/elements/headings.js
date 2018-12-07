@@ -19,5 +19,9 @@ function getHeadingType(headingType) {
 function setHeading(text, headingType=1) {
 	hashes = "#".repeat(getHeadingType(headingType));
 	heading = hashes + " " + text;
-	this.markdown.elements.append(heading);
+	this.markdown.elements.push(heading);
+}
+
+module.exports = {
+	setHeading: setHeading
 }

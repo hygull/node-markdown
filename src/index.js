@@ -11,13 +11,15 @@
  */
 
 const {getType} = require("./types");
+const {setHeading} = require("./elements/headings")
 
-class Markdown() {
+class Markdown {
 	constructor(fileName="Untitled-markdown") {
 		/*
 			Methods will be added here
 		*/
 		this.getType = getType;
+		this.setHeading = setHeading;
 
 		this.fileName = this.checkAndSet(fileName);
 		this.markdown = {
@@ -32,4 +34,6 @@ class Markdown() {
 	}
 }
 
-module.exports = Markdown;
+module.exports = {
+	Markdown: Markdown
+};

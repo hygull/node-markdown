@@ -2,9 +2,10 @@
   "name": "node-markdown",
   "version": "1.0.1",
   "description": "An npm package which allows to generate a markdown file using a pure object oriented oriented approach which can be used to create documentation (README.md) for projects.",
-  "main": "An npm package which allows to generate a markdown file using a pure object oriented oriented approach which can be used to create documentation (README.md) for projects.\u001b[A\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[A\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[A\u001b[B\u001b[B\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C",
+  "main": "./src/index.js",
   "scripts": {
-    "test-headings": "node ./tests/headings.js"
+    "test-headings": "node ./tests/headings.js",
+    "test-any": "node ./tests/any.js"
   },
   "repository": {
     "type": "git",

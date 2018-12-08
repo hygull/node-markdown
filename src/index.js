@@ -14,7 +14,9 @@ const {getType} = require("./types");
 const {setHeading} = require("./elements/headings");
 const {
 	setTextLink,
-	getTextLink
+	getTextLink,
+	setImageLink,
+	getImageLink
 } = require("./elements/links");
 
 class Markdown {
@@ -30,10 +32,12 @@ class Markdown {
 		this.setHeading = setHeading;
 
 		/*
-			LINKS
+			To (vist link | diplay image)
 		*/
 		this.getTextLink = getTextLink;
 		this.setTextLink = setTextLink;
+		this.setImageLink = setImageLink;
+		this.getImageLink = getImageLink;
 
 		this.fileName = this.checkAndSet(fileName);
 		this.markdown = {

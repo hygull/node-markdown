@@ -13,24 +13,63 @@ An npm package which allows to generate a markdown file using a pure object orie
 
 <h2 id='examples'>Examples</h2>
 
-* <a href="#links">Get/set links</a>
+* <a href="#link-to-visit">Get/set visit links</a>
 
-<h3 id="links">Get/set links</h3>
+* <a href="#link-to-display-image">Get/set markdown code to diaplay image</a>
+
+> Please look into the below well commented examples to have a quick taste. 
+
+<h3 id="link-to-visit">Get/set visit links</h3>
 
 ```javascript
 const {Markdown} = require("node-markdown");
 const md = new Markdown();
 
-/* Get link
-   ========
+/* Get anchor link (to visit)
+   ==========================
+   
    [Visit w3schools](https://www.w3schools.com)
 */
 console.log(md.getTextLink("Visit w3schools", "https://www.w3schools.com"));
 
-/* Set link
-   ========
-   { elements: [ '[Visit w3schools](https://www.w3schools.com)' ] }
+/* Set anchor link (to visit)
+   ==========================
+
+	{
+	    "elements": [
+	        "[Visit w3schools](https://www.w3schools.com)"
+	    ]
+	}
 */
 md.setTextLink('Visit w3schools', 'https://www.w3schools.com');
-console.log(md.markdown);
+console.log(JSON.stringify(md.markdown, null, 4));
+
+```
+
+<h3 id="link-to-display-image">Get/set markdown code to diaply image</h3>
+
+```javascript
+const {Markdown} = require("node-markdown");
+const md = new Markdown();
+
+
+/* Get image link (to display)
+   ===========================
+
+   ![Graph icon]{https://image.flaticon.com/icons/svg/123/123407.svg}
+*/
+console.log(md.getImageLink("Graph icon", "https://image.flaticon.com/icons/svg/123/123407.svg"));
+
+/* Set image link (to display)
+   ===========================
+
+	{
+	    "elements": [
+	        "![Graph icon]{https://image.flaticon.com/icons/svg/123/123407.svg}"
+	    ]
+	}
+*/
+md.setImageLink('Graph icon', 'https://image.flaticon.com/icons/svg/123/123407.svg');
+console.log(JSON.stringify(md.markdown, null, 4));
+
 ```

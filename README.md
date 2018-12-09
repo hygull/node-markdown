@@ -11,11 +11,11 @@ An npm package which allows to generate a markdown file using a pure object orie
 | Locally | `npm install  node-markdown` |
 | Globally | `npm install  node-markdown  -g` |
 
-<h2 id="why-markdown">What is markdown and who developed it</h2>
+<h2 id="why-markdown">What is markdown and who developed it?</h2>
 
 + Markdown is a lightweight markup language with plain text formatting syntax. Its design allows it to be converted to many output formats, but the original tool by the same name only supports HTML.
 
-+ **Developed by:** **John Gruber** (in collaboration with **Aaron Swartz** on the syntax)
++ **Developed by** &raquo; **John Gruber** (in collaboration with **Aaron Swartz** on the syntax)
 
 
 <h2 id='examples'>Examples</h2>
@@ -80,3 +80,4 @@ md.setImageLink('Graph icon', 'https://image.flaticon.com/icons/svg/123/123407.s
 console.log(JSON.stringify(md.markdown, null, 4));
 
 ```
+

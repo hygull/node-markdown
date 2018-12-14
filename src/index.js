@@ -12,12 +12,19 @@
 
 const {getType} = require("./types");
 const {setHeading} = require("./elements/headings");
+
 const {
 	setTextLink,
 	getTextLink,
 	setImageLink,
 	getImageLink
 } = require("./elements/links");
+
+const {
+	setTable,
+	getTable
+} = require("./elements/tables");
+
 
 class Markdown {
 	constructor(fileName="Untitled-markdown") {
@@ -32,12 +39,18 @@ class Markdown {
 		this.setHeading = setHeading;
 
 		/*
-			To (vist link | diplay image)
+			To (visit link | diplay image)
 		*/
 		this.getTextLink = getTextLink;
 		this.setTextLink = setTextLink;
 		this.setImageLink = setImageLink;
 		this.getImageLink = getImageLink;
+
+		/*
+			To set/get markdown code for table
+		*/
+		this.getTable = getTable;
+		this.setTable = setTable;
 
 		this.fileName = this.checkAndSet(fileName);
 		this.markdown = {

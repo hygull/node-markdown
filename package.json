@@ -5,7 +5,8 @@
   "main": "./src/index.js",
   "scripts": {
     "test-headings": "node ./tests/headings.js",
-    "test-links": "node ./tests/links.js"
+    "test-links": "node ./tests/links.js",
+    "test-tables": "node ./tests/tables.js"
   },
   "repository": {
     "type": "git",

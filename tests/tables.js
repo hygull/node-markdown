@@ -8,7 +8,13 @@ const md = new Markdown();
 
 /* Get markdown code for table
    ===========================
-   
+	
+	| Col1 | Col2 | Col3 | Col4 |
+	| ---- | ---- | ---- | ---- |
+	| 12 | 34 | 55 | 66 |
+	| 12 | 34 | 55 | 67 |
+
+
 */
 console.log(md.getTable([[12, 34, 55, 66], [12, 34, 55, 67]]));
 

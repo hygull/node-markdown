@@ -24,8 +24,9 @@ function getTableCodeForArray(arr, options) {
 
 		for(let j = 0; j < arr[0].length; j++) {
 			if(i == 0) {
-				colNames.push('Col' + (j + 1));
-				dashes.push('---')
+				let colname = 'Col' + (j + 1)
+				colNames.push(colname);
+				dashes.push('-'.repeat(colname.length))
 			}
 
 			row += arr[i][j] + " | ";

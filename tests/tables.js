@@ -3,7 +3,7 @@
  * Aim: To test providing the markdown formatted code for table
  */
 
-const {Markdown} = require("../src/index");
+const {Markdown} = require("../src/markdown");
 const md = new Markdown();
 
 /* Get markdown code for table
@@ -14,9 +14,32 @@ const md = new Markdown();
 	| 12 | 34 | 55 | 66 |
 	| 12 | 34 | 55 | 67 |
 
-
 */
 console.log(md.getTable([[12, 34, 55, 66], [12, 34, 55, 67]]));
+console.log(md.getTable([]));
+
+let users = [
+	{
+		"fullname": 'Raghvendra Thakur',
+		'age': 26,
+		'salary': '3000000'
+	},
+	{
+		"fullname": 'Hem Agrawani',
+		'age': 36,
+		'salary': '5000000'
+	},
+	{
+		"fullname": 'Gaulin Pour',
+		'age': 25,
+		'salary': '2000000'
+	},
+	{
+		"fullname": 'Tiger Golly',
+		'age': 30,
+		'salary': '3500000'
+	},
+]
 
 // /* Set anchor link (to visit)
 //    ==========================

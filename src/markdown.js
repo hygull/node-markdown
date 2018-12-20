@@ -25,12 +25,17 @@ const {
 	getTable
 } = require("./elements/tables");
 
+const {Message} = require("./message");
 
-class Markdown {
-	constructor(fileName="Untitled-markdown") {
+
+class Markdown extends Message {
+	constructor(fileName = "Untitled-markdown") {
 		/******************************
 			Methods will be added here
 		*******************************/
+
+		super();
+
 		this.getType = getType;
 
 		/*

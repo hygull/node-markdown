@@ -2,7 +2,7 @@
   "name": "node-markdown",
   "version": "1.0.1",
   "description": "An npm package which allows to generate a markdown file using a pure object oriented oriented approach which can be used to create documentation (README.md) for projects.",
-  "main": "./src/index.js",
+  "main": "./src/markdown.js",
   "scripts": {
     "test-headings": "node ./tests/headings.js",
     "test-links": "node ./tests/links.js",

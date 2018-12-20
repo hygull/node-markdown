@@ -3,7 +3,7 @@
  * Aim: To test providing the markdown formatted code for image display / vist link
  */
 
-const {Markdown} = require("../src/index");
+const {Markdown} = require("../src/markdown");
 const md = new Markdown();
 
 /* Get anchor link (to visit)

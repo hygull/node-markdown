@@ -24,9 +24,9 @@ function getTableCodeForArray(arr, options) {
 
 		for(let j = 0; j < arr[0].length; j++) {
 			if(i == 0) {
-				let colname = 'Col' + (j + 1)
-				colNames.push(colname);
-				dashes.push('-'.repeat(colname.length))
+				let colName = 'Col' + (j + 1)
+				colNames.push(colName);
+				dashes.push('-'.repeat(colName.length))
 			}
 
 			row += arr[i][j] + " | ";
@@ -71,15 +71,23 @@ function getTable(arrOrPath, options = {}) {
 				['Dony Jessy', 89, 67000.0]
 			]
 		*/
-		tableCode = getTableCodeForArray(arrOrPath, options);
+
+		if(arrOrPath.length !== 0) {
+			tableCode = getTableCodeForArray(arrOrPath, options);
+		} else {
+			this.__warning('Array is empty')
+			return null; // If there is nothing in an array
+		}
 	} else if(type == "String") {
 		// Here it is assumed that arrOrPath is path of csv file
 		/*
 			D:\Working\Data\CSVs\Users.csv
 		*/
+
 		tableCode = getTableCodeForCsv(arrOrPath, options);
 	} else {
 		// Invalid data (!(Array || String))
+
 		arrOrPath = [['Data 1']];
 		options = {columns: ["Column 1"]};
 		tableCode = getTableCodeForArray(arrOrPath);
